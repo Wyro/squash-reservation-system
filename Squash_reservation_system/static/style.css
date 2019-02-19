@@ -1,3 +1,7 @@
 .gray {
   background-color: gray;
 }
+
+td.column2,td.column3,td.column4,td.column5,td.column6,td.column7,td.column8:hover{
+  cursor: pointer;
+}
