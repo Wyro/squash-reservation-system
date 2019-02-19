@@ -26,7 +26,7 @@ SECRET_KEY = 'tw-(yxrhz-er5yf48ip!0k&(!p#6q6%nys)w-rd%s(8t2-*88w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.wyro.pythonanywhere.com']
 
 
 # Application definition
