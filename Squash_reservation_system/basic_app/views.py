@@ -11,6 +11,9 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'basic_app/index.html')
 
+def reservation(request):
+    return render(request, 'basic_app/reservation.html')
+
 @login_required
 def user_logout(request):
     logout(request)
