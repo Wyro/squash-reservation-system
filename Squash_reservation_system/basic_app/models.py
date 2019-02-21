@@ -14,3 +14,12 @@ class UserProfileInfo(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class CourtEvent(models.Model):
+
+    name = models.CharField('Event Name', max_length = 120)
+    event_day = models.CharField('Event Date', max_length = 120)
+    event_time = models.TimeField("Event Time")
+
+    def __str__(self):
+        return self.name

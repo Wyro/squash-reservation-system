@@ -5,14 +5,12 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from basic_app.models import CourtEvent
 
 
 # Create your views here.
 def index(request):
     return render(request, 'basic_app/index.html')
-
-def reservation(request):
-    return render(request, 'basic_app/reservation.html')
 
 @login_required
 def user_logout(request):
@@ -56,7 +54,6 @@ def register(request):
     return render(request, 'basic_app/registration.html',{'user_form':user_form, 'profile_form':profile_form, 'registered':registered})
 
 
-
 def user_login(request):
 
     if request.method == 'POST':
@@ -77,3 +74,20 @@ def user_login(request):
             return HttpResponse("invalid login details supplied!")
     else:
         return render(request, 'basic_app/login.html',{})
+
+#def reservation(request):
+#    return render(request, 'basic_app/reservation.html')
+
+def reservation(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        selected_day = request.POST.get('selected_day')
+        selected_time = request.POST.get('selected_time')
+
+        event1 = CourtEvent(name = username, event_day = selected_day, event_time = selected_time)
+        event1.save()
+        return HttpResponseRedirect(reverse('index'))
+
+    else:
+        return render(request, 'basic_app/reservation.html',{})

@@ -3,7 +3,7 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1>You can reserve a court!</h1>
+    <h1>{{ user.username }}, here you can reserve a court!</h1>
   </div>
 </div>
 
@@ -23,7 +23,7 @@
 						</thead>
 						<tbody>
 							<tr class="row100">
-								<td class="column100 column1" data-column="column1">8:00 - 9:00</td>
+								<td class="column100 column1" data-column="column1">08:00 - 09:00</td>
 								<td class="column100 column2" data-column="column2">--</td>
 								<td class="column100 column3" data-column="column3">--</td>
 								<td class="column100 column4" data-column="column4">--</td>
@@ -34,7 +34,7 @@
 							</tr>
 
 							<tr class="row100">
-								<td class="column100 column1" data-column="column1">9:00 - 10:00</td>
+								<td class="column100 column1" data-column="column1">09:00 - 10:00</td>
 								<td class="column100 column2" data-column="column2">--</td>
 								<td class="column100 column3" data-column="column3">--</td>
 								<td class="column100 column4" data-column="column4">--</td>
@@ -111,6 +111,20 @@
 							</tr>
 						</tbody>
 					</table>
+          <div class="jumbotron">
+            <div class="container">
+              <form enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="username" value="{{ user.username }}">
+                <label for="selected_day">Selected day:</label>
+                <input type="text" name="selected_day" placeholder="Selected Day">
+                <label for="selected_time">Selected time(reservation for one hour):</label>
+                <input type="time" name="selected_time" placeholder="Selected Time">
+                <input type="submit" value="Reserve">
+              </form>
+            </div>
+          </div>
+
 				</div>
 
 {% endblock %}
