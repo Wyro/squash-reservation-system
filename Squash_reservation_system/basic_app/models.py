@@ -21,5 +21,5 @@ class CourtEvent(models.Model):
     event_day = models.CharField('Event Date', max_length = 120)
     event_time = models.TimeField("Event Time")
 
-    def __str__(self):
-        return self.name
+    #def __str__(self):
+    #    return {self.name, self.event_day, self.event_time}

@@ -90,4 +90,44 @@ def reservation(request):
         return HttpResponseRedirect(reverse('index'))
 
     else:
-        return render(request, 'basic_app/reservation.html',{})
+        events_list = CourtEvent.objects.all()
+        my_dict = {
+        'events_list':events_list,
+        }
+
+        def give_me_wyros_records():
+            return events_list.filter('name'=="Wyro")
+
+        eight=events_list.filter(event_time="8:00")
+        if eight == True:
+            my_dict.update('eight',eight)
+
+        nine = events_list.filter(event_time="9:00")
+        if nine == True:
+            my_dict.update('nine',nine)
+
+        ten = events_list.filter(event_time="10:00")
+        if ten == True:
+            my_dict.update('ten',ten)
+
+        eleven = events_list.filter(event_time="11:00")
+        if eleven == True:
+            my_dict.update('eleven',eleven)
+
+        twelve = events_list.filter(event_time="12:00")
+        if twelve == True:
+            my_dict.update('twelve',twelve)
+
+        thirteen = events_list.filter(event_time="13:00")
+        if thirteen == True:
+            my_dict.update('thirteen',thirteen)
+
+        fourteen = events_list.filter(event_time="14:00")
+        if fourteen == True:
+            my_dict.update('fourteen',fourteen)
+
+        fifteen = events_list.filter(event_time="15:00")
+        if fifteen == True:
+            my_dict.update('fifteen',fifteen)
+
+        return render(request, 'basic_app/reservation.html',my_dict)

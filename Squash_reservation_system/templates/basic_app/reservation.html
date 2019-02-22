@@ -22,93 +22,95 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">08:00 - 09:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+
+							<tr class="row100 firsthour">
+								<td class="column10 column1" data-column="column1">08:00 - 09:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 8 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 8 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 8 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 8 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 8 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 8 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 8 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">09:00 - 10:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 secondhour">
+								<td class="column10 column1" data-column="column1">09:00 - 10:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 9 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 9 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 9 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 9 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 9 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 9 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 9 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">10:00 - 11:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 thirdhour">
+								<td class="column10 column1" data-column="column1">10:00 - 11:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 10 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 10 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 10 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 10 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 10 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 10 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 10 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">11:00 - 12:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 fourthhour">
+								<td class="column10 column1" data-column="column1">11:00 - 12:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 11 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 11 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 11 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 11 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 11 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 11 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 11 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">12:00 - 13:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 fifthhour">
+								<td class="column10 column1" data-column="column1">12:00 - 13:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 12 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 12 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 12 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 12 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 12 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 12 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 12 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">13:00 - 14:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 sixthhour">
+								<td class="column10 column1" data-column="column1">13:00 - 14:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 13 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 13 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 13 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 13 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 13 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 13 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 13 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">14:00 - 15:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 seventhhour">
+								<td class="column10 column1" data-column="column1">14:00 - 15:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 14 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 14 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 14 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 14 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 14 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 14 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 14 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
 
-							<tr class="row100">
-								<td class="column100 column1" data-column="column1">15:00 - 16:00</td>
-								<td class="column100 column2" data-column="column2">--</td>
-								<td class="column100 column3" data-column="column3">--</td>
-								<td class="column100 column4" data-column="column4">--</td>
-								<td class="column100 column5" data-column="column5">--</td>
-								<td class="column100 column6" data-column="column6">--</td>
-								<td class="column100 column7" data-column="column7">--</td>
-								<td class="column100 column8" data-column="column8">--</td>
+							<tr class="row100 eighthour">
+								<td class="column10 column1" data-column="column1">15:00 - 16:00</td>
+								<td class="column100 column2 {% for eve in events_list %}{% if eve.event_day == "Monday" and eve.event_time.hour == 15 %} RESERVED {% endif %}{% endfor %}" data-column="column2"></td>
+								<td class="column100 column3 {% for eve in events_list %}{% if eve.event_day == "Tuesday" and eve.event_time.hour == 15 %} RESERVED {% endif %}{% endfor %}" data-column="column3"></td>
+								<td class="column100 column4 {% for eve in events_list %}{% if eve.event_day == "Wednesday" and eve.event_time.hour == 15 %}RESERVED{% endif %}{% endfor %}" data-column="column4"></td>
+								<td class="column100 column5 {% for eve in events_list %}{% if eve.event_day == "Thursday" and eve.event_time.hour == 15 %}RESERVED{% endif %}{% endfor %}" data-column="column5"></td>
+								<td class="column100 column6 {% for eve in events_list %}{% if eve.event_day == "Friday" and eve.event_time.hour == 15 %}RESERVED{% endif %}{% endfor %}" data-column="column6"></td>
+								<td class="column100 column7 {% for eve in events_list %}{% if eve.event_day == "Saturday" and eve.event_time.hour == 15 %}RESERVED{% endif %}{% endfor %}" data-column="column7"></td>
+								<td class="column100 column8 {% for eve in events_list %}{% if eve.event_day == "Sunday" and eve.event_time.hour == 15 %}RESERVED{% endif %}{% endfor %}" data-column="column8"></td>
 							</tr>
+
 						</tbody>
 					</table>
           <div class="jumbotron">
